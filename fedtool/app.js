@@ -29,7 +29,7 @@ app.configure('production', function(){
 });
 
 // Routes
-app.get(/(.*)/,function(req,res){
+app.all(/(.*)/,function(req,res){
 
   var sub = req.params[0].replace(/^\//,'');
 
