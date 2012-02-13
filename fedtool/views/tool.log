@@ -1,0 +1,100 @@
+Express server listening on port 80 in development mode
+TypeError: Object #<Object> has no method 'debug'
+    at /var/htdocs/node/tool/app.js:47:19
+    at callbacks (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:272:11)
+    at param (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:246:11)
+    at param (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:243:11)
+    at pass (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:253:5)
+    at Router._dispatch (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:280:4)
+    at Object.handle (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:45:10)
+    at next (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/http.js:203:15)
+    at Object.methodOverride [as handle] (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/middleware/methodOverride.js:35:5)
+    at next (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/http.js:203:15)
+TypeError: Object #<Object> has no method 'debug'
+    at /var/htdocs/node/tool/app.js:47:19
+    at callbacks (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:272:11)
+    at param (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:246:11)
+    at param (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:243:11)
+    at pass (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:253:5)
+    at Router._dispatch (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:280:4)
+    at Object.handle (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:45:10)
+    at next (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/http.js:203:15)
+    at Object.methodOverride [as handle] (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/middleware/methodOverride.js:35:5)
+    at next (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/http.js:203:15)
+TypeError: Object #<Object> has no method 'debug'
+    at /var/htdocs/node/tool/app.js:47:19
+    at callbacks (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:272:11)
+    at param (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:246:11)
+    at param (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:243:11)
+    at pass (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:253:5)
+    at Router._dispatch (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:280:4)
+    at Object.handle (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:45:10)
+    at next (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/http.js:203:15)
+    at Object.methodOverride [as handle] (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/middleware/methodOverride.js:35:5)
+    at next (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/http.js:203:15)
+TypeError: Object #<Object> has no method 'debug'
+    at /var/htdocs/node/tool/app.js:47:19
+    at callbacks (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:272:11)
+    at param (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:246:11)
+    at param (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:243:11)
+    at pass (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:253:5)
+    at Router._dispatch (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:280:4)
+    at Object.handle (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:45:10)
+    at next (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/http.js:203:15)
+    at Object.methodOverride [as handle] (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/middleware/methodOverride.js:35:5)
+    at next (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/http.js:203:15)
+TypeError: Object #<Object> has no method 'debug'
+    at /var/htdocs/node/tool/app.js:47:19
+    at callbacks (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:272:11)
+    at param (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:246:11)
+    at param (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:243:11)
+    at pass (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:253:5)
+    at Router._dispatch (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:280:4)
+    at Object.handle (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:45:10)
+    at next (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/http.js:203:15)
+    at Object.methodOverride [as handle] (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/middleware/methodOverride.js:35:5)
+    at next (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/http.js:203:15)
+TypeError: Object #<Object> has no method 'debug'
+    at /var/htdocs/node/tool/app.js:47:19
+    at callbacks (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:272:11)
+    at param (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:246:11)
+    at param (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:243:11)
+    at pass (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:253:5)
+    at Router._dispatch (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:280:4)
+    at Object.handle (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:45:10)
+    at next (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/http.js:203:15)
+    at Object.methodOverride [as handle] (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/middleware/methodOverride.js:35:5)
+    at next (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/http.js:203:15)
+TypeError: Object #<Object> has no method 'debug'
+    at /var/htdocs/node/tool/app.js:47:19
+    at callbacks (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:272:11)
+    at param (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:246:11)
+    at param (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:243:11)
+    at pass (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:253:5)
+    at Router._dispatch (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:280:4)
+    at Object.handle (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:45:10)
+    at next (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/http.js:203:15)
+    at Object.methodOverride [as handle] (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/middleware/methodOverride.js:35:5)
+    at next (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/http.js:203:15)
+TypeError: Object #<Object> has no method 'debug'
+    at /var/htdocs/node/tool/app.js:47:19
+    at callbacks (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:272:11)
+    at param (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:246:11)
+    at param (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:243:11)
+    at pass (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:253:5)
+    at Router._dispatch (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:280:4)
+    at Object.handle (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:45:10)
+    at next (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/http.js:203:15)
+    at Object.methodOverride [as handle] (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/middleware/methodOverride.js:35:5)
+    at next (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/http.js:203:15)
+TypeError: Object #<Object> has no method 'debug'
+    at /var/htdocs/node/tool/app.js:47:19
+    at callbacks (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:272:11)
+    at param (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:246:11)
+    at param (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:243:11)
+    at pass (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:253:5)
+    at Router._dispatch (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:280:4)
+    at Object.handle (/var/htdocs/node/tool/node_modules/express/lib/router/index.js:45:10)
+    at next (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/http.js:203:15)
+    at Object.methodOverride [as handle] (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/middleware/methodOverride.js:35:5)
+    at next (/var/htdocs/node/tool/node_modules/express/node_modules/connect/lib/http.js:203:15)
