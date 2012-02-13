@@ -1,8 +1,20 @@
 h1= title
 h2 source
-form(method="post",action="/uglifyjs/use")
-	textarea(cols=80,rows=12)
-	br
-	button compress
-	h2 output
-	textarea(cols=80,rows=12,disabled)
+form#uglify_form(method="post",action="/uglifyjs/use")
+    textarea(name='source',cols=80,rows=12)= src
+    br
+    input(type='checkbox',name='strict_simicolons',id='J_strict_simicolons')
+    label(for='J_strict_simicolons') strict_simicolons 
+    input(type='checkbox',name='lift_variables',id='J_lift_variables')
+    label(for='J_lift_variables') lift_variables 
+    input#uglify_type(type='hidden',name='type')
+    br
+    button#btn_beautify(type='button') beautify
+    button#btn_compress(type='button') compress
+if error
+    .error= error
+    h2 output
+    textarea(cols=80,rows=12,disabled)
+else
+    h2 output
+    textarea(cols=80,rows=12,disabled)= out
