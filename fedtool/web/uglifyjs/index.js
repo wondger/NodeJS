@@ -13,7 +13,7 @@ var uglifyjs = require('uglify-js'),
 
 exports.uglifyjs = {
     beautify:function(src,opt){
-        return this.uglify(src,'beautify');
+        return this.uglify(src,'beautify',opt);
     },
     compress:function(src,opt){
         return this.uglify(src,'compress');
@@ -23,15 +23,20 @@ exports.uglifyjs = {
 
         var opt = opt || {};
         var type = type == 'compress' ? 'compress' : 'beautify',
-            mangle = opt.mangle || false,
-            squeeze = opt.squeeze || false,
-            ascii_only = opt.ascii_only || false,
-            quote_keys = opt.quote_keys || false,
-            inline_scripts = opt.inline_scripts || false,
-            beautify = opt.beautify || false,
+            strict_semicolons = !!opt.semicolons,
+            mangle = !!opt.mangle,
+            except = opt.except || [],
+            defines = opt.defines || {},
+            squeeze = !!opt.squeeze,
+            make_seqs = !!opt.make_seqs
+            dead_code = !!opt.dead_code,
+            ascii_only = !!opt.ascii_only,
+            quote_keys = !!opt.quote_keys,
+            inline_scripts = !!opt.inline_scripts,
+            beautify = !!opt.beautify,
             indent_start = opt.indent_start || 0,
             indent_level = opt.indent_level || 4,
-            space_colon = opt.space_colon || false;
+            space_colon = !!opt.space_colon;
 
         var ast;
         try{

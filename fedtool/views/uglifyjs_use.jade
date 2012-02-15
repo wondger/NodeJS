@@ -4,11 +4,19 @@ form#uglify_form(method="post",action="/uglifyjs/use")
     textarea(name='source',cols=80,rows=12)= src
     br
     input(type='checkbox',name='strict_simicolons',id='J_strict_simicolons')
-    label(for='J_strict_simicolons') strict_simicolons 
+    label(for='J_strict_simicolons') strict simicolons 
     input(type='checkbox',name='lift_variables',id='J_lift_variables')
-    label(for='J_lift_variables') lift_variables 
-    input#uglify_type(type='hidden',name='type')
+    label(for='J_lift_variables') lift variables 
+    input(type='checkbox',name='mangle_except',id='J_mangle_except')
+    label(for='J_mangle_except') mangle except
+    input(type='checkbox',name='mangle_defines',id='J_mangle_defines')
+    label(for='J_mangle_defines') mangle defines
+    input(type='checkbox',name='ascii_only',id='J_ascii_only')
+    label(for='J_ascii_only') ascii only 
+    input(type='checkbox',name='quote_keys',id='J_quote_keys')
+    label(for='J_quote_keys') quote keys
     br
+    input#uglify_type(type='hidden',name='type')
     button#btn_beautify(type='button') beautify
     button#btn_compress(type='button') compress
 if error
