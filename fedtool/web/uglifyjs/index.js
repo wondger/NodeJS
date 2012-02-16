@@ -16,14 +16,15 @@ exports.uglifyjs = {
         return this.uglify(src,'beautify',opt);
     },
     compress:function(src,opt){
-        return this.uglify(src,'compress');
+        return this.uglify(src,'compress',opt);
     },
     uglify:function(src,type,opt){
         if(src.constructor != String) return;
 
         var opt = opt || {};
         var type = type == 'compress' ? 'compress' : 'beautify',
-            strict_semicolons = !!opt.semicolons,
+            strict_semicolons = !!opt.strict_semicolons,
+            lift_variables = !!opt.lift_variables,
             mangle = !!opt.mangle,
             except = opt.except || [],
             defines = opt.defines || {},
@@ -41,10 +42,13 @@ exports.uglifyjs = {
         var ast;
         try{
             //parse code and get the initial AST
-            ast = jsp.parse(src);
+            ast = jsp.parse(src,strict_semicolons);
         }catch(e){
             return {error:e.message,out:''};
         }
+
+        //merge and move var declarations to the scop of the scope
+        ast = lift_variables && pro.ast_lift_variables(ast) || ast;
 
         //get a new AST with mangled names
         ast = mangle && pro.ast_mangle(ast) || ast;

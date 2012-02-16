@@ -1,10 +1,11 @@
-h1= title
+h1
+    a(href='/uglifyjs') #{title}
 h2 source
 form#uglify_form(method="post",action="/uglifyjs/use")
-    textarea(name='source',cols=80,rows=12)= src
+    textarea(id='source',name='source',cols=80,rows=12)= src
     br
     input(type='checkbox',name='strict_semicolons',id='J_strict_semicolons')
-    label(for='J_strict_simicolons') strict simicolons 
+    label(for='J_strict_semicolons') strict semicolons 
     input(type='checkbox',name='lift_variables',id='J_lift_variables')
     label(for='J_lift_variables') lift variables 
     input(type='checkbox',name='mangle_except',id='J_mangle_except')

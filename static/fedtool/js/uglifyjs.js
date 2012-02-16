@@ -26,6 +26,10 @@ $(function(){
     });
 
     function io(){
+        if(!source.val()){
+            error.html('source code is empty!!!')
+            return;
+        }
         $.ajax({
             url:'/uglifyjs/use.do',
             data:form.serialize(),
