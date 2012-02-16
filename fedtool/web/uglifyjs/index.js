@@ -47,7 +47,7 @@ exports.uglifyjs = {
         }
 
         //get a new AST with mangled names
-        //ast = pro.ast_mangle(ast);
+        ast = mangle && pro.ast_mangle(ast) || ast;
         
         //get an AST with compression optimizations
         ast = pro.ast_squeeze(ast);
@@ -55,11 +55,11 @@ exports.uglifyjs = {
         //compressed code here
         var final_code = pro.gen_code(ast,{
             //encode non-ASCII characters as \uXXXX
-            ascii_only:true,
+            ascii_only:ascii_only,
             //quote all keys in literal objects
-            quote_keys:true,
+            quote_keys:quote_keys,
             //escape occurrences of </script in strings
-            inline_scripts:false,
+            inline_scripts:inline_scripts,
             //pass true if you want indented output
             beautify:type=='beautify',
             //initial indentation in spaces
@@ -67,7 +67,7 @@ exports.uglifyjs = {
             //indentation level, in spaces (pass an even number)
             indent_level:4,
             //wether to put a space before the colon in object literals
-            space_colon:true
+            space_colon:space_colon
         });
         
         return {out:final_code,error:''};

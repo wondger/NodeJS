@@ -40,6 +40,9 @@ app.all(/(.*)/,function(req,res){
     case 'uglifyjs/use':
           routes.uglifyjs_use(req,res);
           break;
+    case 'uglifyjs/use.do':
+          routes.uglifyjs_use(req,res,1);
+          break;
     case '':
     case 'index':
     case 'home':
