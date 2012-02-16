@@ -1,5 +1,8 @@
 h1
+    a(href='/') home
+    \ /\ 
     a(href='/uglifyjs') #{title}
+    \ / use
 h2 source
 form#uglify_form(method="post",action="/uglifyjs/use")
     textarea(id='source',name='source',cols=80,rows=12) #{src}
