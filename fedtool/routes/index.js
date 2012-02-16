@@ -14,7 +14,7 @@ exports.uglifyjs = function(req,res){
     res.render('uglifyjs', { title: 'UglifyJS' })
 };
 exports.uglifyjs_use = function(req,res,ajax){
-    var src = req.body.source,
+    var src = req.body.source || '',
         type = req.body.type;
     var out = {out:'',error:''};
 

@@ -2,7 +2,7 @@ h1
     a(href='/uglifyjs') #{title}
 h2 source
 form#uglify_form(method="post",action="/uglifyjs/use")
-    textarea(id='source',name='source',cols=80,rows=12)= src
+    textarea(id='source',name='source',cols=80,rows=12) #{src}
     br
     input(type='checkbox',name='strict_semicolons',id='J_strict_semicolons')
     label(for='J_strict_semicolons') strict semicolons 
