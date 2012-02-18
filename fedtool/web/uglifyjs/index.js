@@ -29,15 +29,15 @@ exports.uglifyjs = {
             except = opt.except || [],
             defines = opt.defines || {},
             squeeze = !!opt.squeeze,
-            make_seqs = !!opt.make_seqs
-            dead_code = !!opt.dead_code,
-            ascii_only = !!opt.ascii_only,
-            quote_keys = !!opt.quote_keys,
-            inline_scripts = !!opt.inline_scripts,
+            make_seqs = !!opt.make_seqs || true,
+            dead_code = !!opt.dead_code || true,
             beautify = !!opt.beautify,
+            quote_keys = !!opt.quote_keys,
             indent_start = opt.indent_start || 0,
             indent_level = opt.indent_level || 4,
-            space_colon = !!opt.space_colon;
+            space_colon = !!opt.space_colon,
+            ascii_only = !!opt.ascii_only,
+            inline_scripts = !!opt.inline_scripts || true;
 
         var ast;
         try{
