@@ -11,7 +11,7 @@ var app = module.exports = express.createServer();
 
 app.configure(function(){
     //no cache
-    app.use(express.static(__dirname + '/'),{maxAge:Date.now()});
+    app.use(express.static(__dirname + '/public'),{maxAge:Date.now()});
     //app.use(app.router);
 });
 
