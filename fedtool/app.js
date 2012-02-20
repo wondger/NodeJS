@@ -1,16 +1,4 @@
-
-/**
- * Module dependencies.
- */
-
-var express = require('express')
-  , routes = require('./routes')
-  , util = require('util');
-
-var app = module.exports = express.createServer();
-
-// Configuration
-
+/** * Module dependencies.  */ var express = require('express') , routes = require('./routes') , util = require('util'); var app = module.exports = express.createServer(); // Configuration 
 app.configure(function(){
   app.set('views', __dirname + '/views');
   app.set('view engine', 'jade');
