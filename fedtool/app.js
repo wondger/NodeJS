@@ -17,7 +17,7 @@ app.configure('production', function(){
 });
 
 // Routes
-app.all(/(.*)/,function(req,res){
+app.all(/(.*)/,function(req,res,next){
 
   var sub = req.params[0].replace(/^\//,'');
 
@@ -40,9 +40,13 @@ app.all(/(.*)/,function(req,res){
           routes.index(req,res);
           break;
     default:
-          routes.notfound(req,res);
+          next();
           break;
   }
+});
+// pass exsits Routes
+app.all('*',function(req,res){
+    routes.notfound(req,res);
 });
 
 app.listen(8080);
