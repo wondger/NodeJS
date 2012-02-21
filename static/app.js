@@ -11,7 +11,8 @@ var app = module.exports = express.createServer();
 
 app.configure(function(){
     //no cache
-    app.use(express.static(__dirname + '/public'),{maxAge:Date.now()});
+    //app.use(express.static(__dirname + '/public'),{maxAge:Date.now()});
+    app.use(gzippo.staticGzip(__dirname + '/public'),{maxAge:Date.now()});
     //app.use(app.router);
     app.use(function(req,res){
         res.send('not found.',404);
