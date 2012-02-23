@@ -13,9 +13,9 @@ form#uglify_form(method="post",action="/uglifyjs/use")
     label(for='J_lift_variables') lift variables 
     input(type='checkbox',name='mangle',id='J_mangle')
     label(for='J_mangle') mangle 
-    input(type='checkbox',name='mangle_except',id='J_mangle_except')
+    input(type='checkbox',name='mangle_except',id='J_mangle_except',disabled)
     label(for='J_mangle_except') mangle except
-    input(type='checkbox',name='mangle_defines',id='J_mangle_defines')
+    input(type='checkbox',name='mangle_defines',id='J_mangle_defines',disabled)
     label(for='J_mangle_defines') mangle defines
     input(type='checkbox',name='ascii_only',id='J_ascii_only')
     label(for='J_ascii_only') ascii only 
