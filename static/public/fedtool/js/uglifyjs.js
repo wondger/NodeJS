@@ -15,15 +15,26 @@ $(function(){
         error = $('#error'),
         type = $('#uglify_type');
 
-    $('#btn_beautify').click(function(){
+    var btn_beautify = $('#btn_beautify'),
+        btn_compress = $('#btn_compress'),
+
+    btn_beautify.click(function(){
         type.val('beautify');
+        toggleBtn(false);
         io();
     });
 
-    $('#btn_compress').click(function(){
+    btn_compress.click(function(){
         type.val('compress');
+        toggleBtn(false);
         io();
     });
+
+    function toggleBtn(f){
+        var f = !!f;
+        btn_beautify.prop('disabled',!f);
+        btn_compress.prop('disabled',!f);
+    }
 
     function io(){
         if(!source.val()){
@@ -43,9 +54,11 @@ $(function(){
                 }else if(data.out){
                     output.val(data.out);
                 }
+                toggleBtn(true);
             },
             error:function(){
                 form.submit();
+                toggleBtn(true);
             }
         })
     }
