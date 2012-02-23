@@ -16,7 +16,7 @@ $(function(){
         type = $('#uglify_type');
 
     var btn_beautify = $('#btn_beautify'),
-        btn_compress = $('#btn_compress'),
+        btn_compress = $('#btn_compress');
 
     btn_beautify.click(function(){
         type.val('beautify');
