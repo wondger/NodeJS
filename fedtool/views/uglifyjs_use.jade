@@ -26,7 +26,7 @@ form#uglify_form(method="post",action="/uglifyjs/use")
 if error
     .error#error= error
     h2 output
-    textarea(id='output',cols=80,rows=12,readonly)
+    textarea(id='output',cols=80,rows=12,readonly,required)
 else
     .error#error
     h2 output
