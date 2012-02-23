@@ -3,8 +3,8 @@ verbose cli [ 'C:\\Program Files\\nodejs\\\\node.exe',
 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
 verbose cli   'install',
 verbose cli   'gzippo' ]
-info using npm@1.1.0-3
-info using node@v0.6.10
+info using npm@1.1.1
+info using node@v0.6.11
 verbose config file C:\Documents and Settings\omiga\.npmrc
 verbose config file C:\Program Files\nodejs\etc\npmrc
 verbose config file C:\Program Files\nodejs\node_modules\npm\npmrc
@@ -31,7 +31,7 @@ ERR!     at Request.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_m
 ERR!     at Request.emit (events.js:88:20)
 ERR!     at ClientRequest.<anonymous> (C:\Program Files\nodejs\node_modules\npm\node_modules\request\main.js:195:10)
 ERR!     at ClientRequest.emit (events.js:67:17)
-ERR!     at CleartextStream.<anonymous> (http.js:1134:11)
+ERR!     at CleartextStream.<anonymous> (http.js:1137:11)
 ERR!     at CleartextStream.emit (events.js:67:17)
 ERR! You may report this log at:
 ERR!     <http://github.com/isaacs/npm/issues>
@@ -41,7 +41,7 @@ ERR!
 ERR! System Windows_NT 5.1.2600
 ERR! command "C:\\Program Files\\nodejs\\\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "gzippo"
 ERR! cwd F:\website\node
-ERR! node -v v0.6.10
-ERR! npm -v 1.1.0-3
+ERR! node -v v0.6.11
+ERR! npm -v 1.1.1
 ERR! message failed to fetch from registry: gzippo
 verbose exit [ 1, true ]

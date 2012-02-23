@@ -44,7 +44,14 @@ exports.uglifyjs = {
             //parse code and get the initial AST
             ast = jsp.parse(src,strict_semicolons);
         }catch(e){
-            return {error:e.message,out:''};
+            return {
+                error:{
+                    message:e.message,
+                    line:e.line,
+                    col:e.col
+                },
+                out:''
+            };
         }
 
         //merge and move var declarations to the scop of the scope
@@ -77,3 +84,8 @@ exports.uglifyjs = {
         return {out:final_code,error:''};
     }
 };
+/*
+ * TODO:
+ *      1. mangle_except,mangle_defines
+ *      2. upload files
+ */

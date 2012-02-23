@@ -5,12 +5,14 @@ h1
     \ / use
 h2 source
 form#uglify_form(method="post",action="/uglifyjs/use")
-    textarea(id='source',name='source',cols=80,rows=12) #{src}
+    textarea(id='source',name='source',style="width:100%;height:200px") #{src}
     br
     input(type='checkbox',name='strict_semicolons',id='J_strict_semicolons')
     label(for='J_strict_semicolons') strict semicolons 
     input(type='checkbox',name='lift_variables',id='J_lift_variables')
     label(for='J_lift_variables') lift variables 
+    input(type='checkbox',name='mangle',id='J_mangle')
+    label(for='J_mangle') mangle 
     input(type='checkbox',name='mangle_except',id='J_mangle_except')
     label(for='J_mangle_except') mangle except
     input(type='checkbox',name='mangle_defines',id='J_mangle_defines')
@@ -26,8 +28,8 @@ form#uglify_form(method="post",action="/uglifyjs/use")
 if error
     .error#error= error
     h2 output
-    textarea(id='output',cols=80,rows=12,disabled)
+    textarea(id='output',style='width:100%;height:200px',disabled)
 else
     .error#error
     h2 output
-    textarea(id='output',cols=80,rows=12,disabled)= out
+    textarea(id='output',style='width:100%;height:200px',disabled)= out

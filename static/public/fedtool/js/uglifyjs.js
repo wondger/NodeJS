@@ -39,7 +39,7 @@ $(function(){
                 error.html('');
                 output.val('');
                 if(data.error){
-                    error.html(data.error);
+                    error.html('ERROR: line '+data.error.line+' col '+data.error.col+'<br />'+data.error.message);
                 }else if(data.out){
                     output.val(data.out);
                 }
