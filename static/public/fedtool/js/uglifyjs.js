@@ -39,6 +39,7 @@ $(function(){
     function io(){
         if(!source.val()){
             error.html('source code is empty!!!')
+            toggleBtn(true);
             return;
         }
         $.ajax({
