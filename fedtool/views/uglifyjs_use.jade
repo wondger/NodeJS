@@ -1,3 +1,4 @@
+script(src='http://static.fedtool.com/fedtool/js/uglifyjs.js')
 h1
     a(href='/') FEDTool
     \ /\ 
@@ -5,6 +6,9 @@ h1
     \ / use
 h2 source
 form#uglify_form(method="post",action="/uglifyjs/use")
+    input(type='checkbox',name='ck_source_url',id='J_source_url')
+    label(for='J_source_url') source URL:
+    input(type='text',class='i_text',name='source_url',placeholder='enter source code URL')
     textarea(id='source',name='source',style="width:100%;height:200px") #{src}
     br
     input(type='checkbox',name='strict_semicolons',id='J_strict_semicolons')
