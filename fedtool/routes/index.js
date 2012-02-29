@@ -3,6 +3,7 @@
  * GET home page.
  */
 var util = require('util'),
+    io = require('../io').io,
     uglifyjs = require('../web/uglifyjs').uglifyjs;
 
 exports.index = function(req,res){
@@ -15,8 +16,16 @@ exports.uglifyjs = function(req,res){
 };
 exports.uglifyjs_use = function(req,res,ajax){
     var src = req.body.source || '',
-        type = req.body.type;
+        type = req.body.type,
+        url = req.body.source_url;
     var out = {out:'',error:''};
+
+    if(url){
+        io.get(url,function(c){
+            src = c;
+            console.log(src);
+        });
+    }
 
     if(type=='beautify'){
         src && (out = uglifyjs.beautify(src,req.body));
