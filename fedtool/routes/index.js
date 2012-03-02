@@ -19,32 +19,37 @@ exports.uglifyjs_use = function(req,res,ajax){
         type = req.body.type,
         url = req.body.source_url;
     var out = {out:'',error:''};
+    var data = null;
 
-    if(url){
+    if(url && !src){
         io.get(url,function(c){
-            src = c;
-            console.log(src);
+            src = c.type && c.content;
+            doit();
         });
-    }
-
-    if(type=='beautify'){
-        src && (out = uglifyjs.beautify(src,req.body));
     }else{
-        src && (out = uglifyjs.compress(src,req.body));
+        doit();
     }
 
-    var data = {
-        title:'UglifyJS',
-        src:src,
-        out:out.out,
-        error:out.error
-    }
+    function doit(){
+        if(type=='beautify'){
+            src && (out = uglifyjs.beautify(src,req.body));
+        }else{
+            src && (out = uglifyjs.compress(src,req.body));
+        }
 
-    if(!!ajax){
-        res.json(data);
-    }
+        data = {
+            title:'UglifyJS',
+            src:src,
+            out:out.out,
+            error:out.error
+        }
 
-    res.render('uglifyjs_use',data);
+        if(!!ajax){
+            res.json(data);
+        }
+
+        res.render('uglifyjs_use',data);
+    }
 };
 
 //notfound

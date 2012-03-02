@@ -14,10 +14,10 @@ var io = {
         var u = url.parse(_url);
         var opt = {
             method:method.toLowerCase() === 'post' ? 'post' : 'get',
-            host:url.host || '',
-            hostname:url.hostname || '',
-            port:url.port || 80,
-            path:url.path || ''
+            host:u.host || '',
+            hostname:u.hostname || '',
+            port:u.port || 80,
+            path:u.path || ''
         }
 
         var req = http.request({
@@ -28,6 +28,7 @@ var io = {
             method:opt.method
         },function(res){
             if(!fn || fn.constructor != Function) return;
+
             //res.setEncoding('utf8');
             var c = '';
 
@@ -36,11 +37,11 @@ var io = {
             });
 
             res.on('end',function(){
-                console.log(c);
-                //fn.call(null,c);
+                fn.call(null,{type:1,content:c});
             });
         }).on('error',function(e){
             console.log(typeof e);
+            fn.call(null,{type:0,error:e});
         });
 
         req.end();

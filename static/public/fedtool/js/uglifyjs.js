@@ -13,7 +13,9 @@ $(function(){
         source = $('#source'),
         output = $('#output'),
         error = $('#error'),
-        type = $('#uglify_type');
+        type = $('#uglify_type'),
+        ck_url = $('#J_src_url'),
+        url = $('#J_source_url');
 
     var btn_beautify = $('#btn_beautify'),
         btn_compress = $('#btn_compress');
@@ -37,7 +39,7 @@ $(function(){
     }
 
     function io(){
-        if(!source.val()){
+        if((!ck_url.attr('checked') && !source.val()) || (!!ck_url.attr('checked') && !url.val())){
             error.html('source code is empty!!!')
             toggleBtn(true);
             return;
@@ -50,6 +52,7 @@ $(function(){
             success:function(data){
                 error.html('');
                 output.val('');
+                source.val(data.src);
                 if(data.error){
                     error.html('ERROR: line '+data.error.line+' col '+data.error.col+'<br />'+data.error.message);
                 }else if(data.out){
