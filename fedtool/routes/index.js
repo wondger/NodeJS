@@ -23,21 +23,31 @@ exports.uglifyjs_use = function(req,res,ajax){
 
     if(url && !src){
         io.get(url,function(c){
-            src = c.type && c.content;
-            doit();
+            if(c.type){
+                src = c.content;
+                doit();
+            }else{
+                doit({
+                    title:'UglifyJS',
+                    src:'',
+                    out:'',
+                    error:{message:c.error.message,code:c.error.code}
+                });
+                return;
+            }
         });
     }else{
         doit();
     }
 
-    function doit(){
-        if(type=='beautify'){
+    function doit(data){
+        if(type=='beautify' && !data){
             src && (out = uglifyjs.beautify(src,req.body));
-        }else{
+        }else if(!data){
             src && (out = uglifyjs.compress(src,req.body));
         }
 
-        data = {
+        data = !!data && data || {
             title:'UglifyJS',
             src:src,
             out:out.out,

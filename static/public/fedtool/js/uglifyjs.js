@@ -54,7 +54,13 @@ $(function(){
                 output.val('');
                 source.val(data.src);
                 if(data.error){
-                    error.html('ERROR: line '+data.error.line+' col '+data.error.col+'<br />'+data.error.message);
+                    if(data.error.line && data.error.col){
+                        error.html('ERROR: line '+data.error.line+' col '+data.error.col+'<br />'+data.error.message);
+                    }else if(data.error.code){
+                        error.html('ERROR: '+data.error.code+'<br />'+data.error.message);
+                    }else{
+                        error.html('ERROR!')
+                    }
                 }else if(data.out){
                     output.val(data.out);
                 }

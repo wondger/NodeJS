@@ -40,7 +40,7 @@ var io = {
                 fn.call(null,{type:1,content:c});
             });
         }).on('error',function(e){
-            console.log(typeof e);
+            console.log(e.message);
             fn.call(null,{type:0,error:e});
         });
 
