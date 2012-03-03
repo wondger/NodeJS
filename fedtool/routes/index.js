@@ -17,11 +17,12 @@ exports.uglifyjs = function(req,res){
 exports.uglifyjs_use = function(req,res,ajax){
     var src = req.body.source || '',
         type = req.body.type,
-        url = req.body.source_url;
+        url = req.body.source_url,
+        ck_url = req.body.ck_source_url;
     var out = {out:'',error:''};
     var data = null;
 
-    if(url && !src){
+    if(url && ck_url){
         io.get(url,function(c){
             if(c.type){
                 src = c.content;
